@@ -3,7 +3,7 @@ import "./Movie.css";
 import Overview from "./Overview";
 
 function Movie({poster_path, title, vote_average, overview}) {
-    const imageUrl = `https://developer.themoviedb.org${poster_path}`;
+    const imageUrl = `https://image.tmdb.org/t/p/w1280${poster_path}`;
     console.log(imageUrl);
     const [showOverview, setShowOverview] = useState(false);
     

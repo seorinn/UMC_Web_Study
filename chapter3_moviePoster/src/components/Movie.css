@@ -10,8 +10,15 @@
 .Movie .image-section{
     width: 140px;
     height: 230px;
-    padding: 10px;
+    /* padding: 10px; */
     /* border: 1px solid black; */
+}
+.Movie img{
+    max-width: 155px;
+    max-height: 250px;
+    display: block;
+    /* margin: 10px; */
+    object-fit: contain;
 }
 .Movie .info-section{
     width: 125px;
