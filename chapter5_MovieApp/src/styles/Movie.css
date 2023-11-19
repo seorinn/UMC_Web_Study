@@ -1,0 +1,7 @@
+.Movie .movie_wrapper{
+    max-width: 1650px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 10px auto;
+}

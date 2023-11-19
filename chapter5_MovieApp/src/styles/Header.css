@@ -1,0 +1,26 @@
+.Header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(3,37,65,1);
+    height: 64px;
+}
+.Header .contents{
+    display: flex;
+    margin-left: 230px;
+}
+.Header .logo{
+    cursor: pointer;
+    margin-right: 16px;
+    width: 154px;
+    height: 20px;
+}
+.Header button{
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    margin-right: 14px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
