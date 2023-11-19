@@ -11,8 +11,9 @@ export const MovieWrapper = styled.div`
 
 export const Image = styled.img`
   width: 100%;
+  height: 375px;
   display: block;
-  object-fit: contain;
+  // object-fit: contain;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 `;

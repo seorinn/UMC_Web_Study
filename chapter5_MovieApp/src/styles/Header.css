@@ -7,7 +7,7 @@
 }
 .Header .contents{
     display: flex;
-    margin-left: 230px;
+    margin-left: 18%;
 }
 .Header .logo{
     cursor: pointer;
@@ -23,4 +23,18 @@
     background-color: transparent;
     outline: none;
     border: none;
+}
+
+.Header .login{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+}
+.Header .login button{
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
 }

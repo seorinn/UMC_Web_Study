@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import "../styles/Header.css";
+import { useState } from "react";
 
 const Header = () => {
     const navigate = useNavigate();
+    const [isLogin, setIsLogin] = useState();
 
     return(
         <div className="Header">
@@ -12,6 +14,10 @@ const Header = () => {
                     <button className="movie" onClick={()=>{navigate(`/movie`)}}>영화</button>
                     <button className="tv" onClick={()=>{navigate(`/tv`)}}>TV 프로그램</button>
                     <button className="celebrity" onClick={()=>{navigate(`/person`)}}>인물</button>
+                </div>
+                <div className="login">
+                    <button onClick={()=>{setIsLogin(!isLogin)}}>{isLogin?"로그인":"로그아웃"}</button>
+                    {isLogin?"로그인":"로그아웃"} 해주세요!
                 </div>
             </div>
         </div>
