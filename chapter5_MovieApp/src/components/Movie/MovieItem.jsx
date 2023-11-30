@@ -2,13 +2,12 @@ import { useState } from "react";
 // import "../Movie.css";
 import Overview from "../Overview";
 import { Image, InfoSection, MovieWrapper, OverviewWrapper, Title, VoteAverage } from "./MovieItem.style";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function MovieItem({poster_path, title, vote_average, overview}) {
     const imageUrl = `https://image.tmdb.org/t/p/w1280${poster_path}`;
     const [showOverview, setShowOverview] = useState(false);
     const navigate = useNavigate();
-    const location = useLocation();
 
     const handleMouseEnter = () => {
         setShowOverview(true);

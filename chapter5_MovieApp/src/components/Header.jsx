@@ -1,10 +1,23 @@
-import { useNavigate } from "react-router-dom";
 import "../styles/Header.css";
-import { useState } from "react";
+import {LoginStateContext, LoginHandlerContext} from "../App";
+
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
 
 const Header = () => {
     const navigate = useNavigate();
-    const [isLogin, setIsLogin] = useState();
+    const IsLoggedIn = useContext(LoginStateContext);
+    const loginHandler = useContext(LoginHandlerContext);
+
+    const handleLogout = () => {
+        if(IsLoggedIn){
+            if(window.confirm("로그아웃 하시겠습니까?")){
+                loginHandler(false);
+            }
+        } else{
+            navigate(`/login`);
+        }
+    }
 
     return(
         <div className="Header">
@@ -16,8 +29,8 @@ const Header = () => {
                     <button className="celebrity" onClick={()=>{navigate(`/person`)}}>인물</button>
                 </div>
                 <div className="login">
-                    <button onClick={()=>{setIsLogin(!isLogin)}}>{isLogin?"로그인":"로그아웃"}</button>
-                    {isLogin?"로그인":"로그아웃"} 해주세요!
+                    <button onClick={handleLogout}>{IsLoggedIn?"로그아웃":"로그인"}</button>
+                    {IsLoggedIn?"환영합니다!":"로그인 해주세요!"}
                 </div>
             </div>
         </div>
