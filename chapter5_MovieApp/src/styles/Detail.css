@@ -1,0 +1,12 @@
+.Detail .container{
+    margin: 50px 18% 0 18%;
+    display: flex;
+}
+.Detail img{
+    width: 300px;
+}
+.Detail .title{
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
